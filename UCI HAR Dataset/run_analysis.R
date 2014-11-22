@@ -16,8 +16,8 @@
 #
 # What you expect:
 #   F. Result of the data table will be shown in 5 minutes
-#   G. You can also view the result using 'View(result)"
-#   F. The result can be saved as the filename stated as outputName, by removing the comment of the last line
+#   G. The result will be saved as the filename stated as tidy_data_set.txt
+#   H. You can also view the result using 'View(result)"
 
 outputName <- "tidy_data_set.txt"
 
@@ -78,7 +78,7 @@ remove(activities)
 remove(features)
 remove(tmp)
 
-# saving result into a file...
+# save result into a file...
 print("Saving result...")
 write.table(result, outputName, row.name=FALSE)
 
