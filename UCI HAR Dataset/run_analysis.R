@@ -1,23 +1,23 @@
-# Course Project getdata-009
+# Getting and Cleaning Data Course Project (getdata-009)
 # Written by tommyho510@gmail.com
 #
 # Source of data for this project: 
-#	  https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+#	  `https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip`
 #
 # To run this script:
 #   A. Download the above zip file into a directory, such as
-#     c:\getdata-009\Course Project
-#   B. Extract the zip file
-#     c:\getdata-009\project\UCI HAR Dataset
+#     `c:\getdata-009\Course Project`
+#   B. Extract the zip file to
+#     `c:\getdata-009\project\UCI HAR Dataset`
 #   C. Save this file 'run_analysis.R' to the same folder
-#     c:\getdata-009\project\UCI HAR Dataset
-#   D. Run 'setwd("C:/getdata-009/Course Project/UCI HAR Dataset/")'
-#   E. Run 'source("run_analysis.R")'
+#     `c:\getdata-009\project\UCI HAR Dataset`
+#   D. Run `setwd("C:/getdata-009/Course Project/UCI HAR Dataset/")`
+#   E. Run `source("run_analysis.R")`
 #
 # What you expect:
 #   F. Result of the data table will be shown in 5 minutes
-#   G. The result will be saved as the filename stated as tidy_data_set.txt
-#   H. You can also view the result using 'View(result)"
+#   G. The result will be saved as the filename stated as `tidy_data_set.txt`
+#   H. You can also view the result using `View(result)`
 
 outputName <- "tidy_data_set.txt"
 
