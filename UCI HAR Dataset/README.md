@@ -23,13 +23,16 @@ What you expect:
 What the script do...
 
 1. Merges the training and the test sets to create one data set (may take up to 4 minutes)...
-  ```r
+  
+  ```sh
   X <- rbind(read.table("train/X_train.txt"), read.table("test/X_test.txt"))
   Y <- rbind(read.table("train/y_train.txt"), read.table("test/y_test.txt"))
   S <- rbind(read.table("train/subject_train.txt"), read.table("test/subject_test.txt"))
   ```
+  
 2. Extracts only the measurements on the mean and standard deviation for each measurement...
-  ```r
+  
+  ```sh
   features <- read.table("features.txt")
   features_of_interest <- grep("-mean\\(\\)|-std\\(\\)", features[, 2])
   X <- X[, features_of_interest]
@@ -37,20 +40,24 @@ What the script do...
   names(X) <- gsub("\\(|\\)", "", names(X))
   names(X) <- tolower(names(X))
   ```
+  
 3. Uses descriptive activity names to name the activities in the data set...
-  ```r
+  ```sh
   activities <- read.table("activity_labels.txt")
   activities[, 2] <- gsub("_", " ", tolower(as.character(activities[, 2])))
   Y[,1] <- activities[Y[,1], 2]
   names(Y) <- "activity"
   ```
 4. Appropriately labels the data set with descriptive activity names...
-  ```r
+  
+  ```sh
   names(S) <- "subject"
   tbCombined <- cbind(S, Y, X)
   ```
+  
 5. Creates a 2nd, independent tidy data set with the average of each variable for each activity and each subject...
-  ```r
+  
+  ```sh
   uniqueSubjects <- unique(S)[,1]
   numSubjects <- length(unique(S)[,1])
   numActivities <- length(activities[,1])
@@ -69,8 +76,10 @@ What the script do...
       }
   }
   ```
+  
 6. Remove old data tables to save memory, show and save result as tidy_data.txt
-  ```r
+  
+  ```sh
   remove(S)
   remove(X)
   remove(Y)
